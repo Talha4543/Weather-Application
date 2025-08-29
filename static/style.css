@@ -1,0 +1,129 @@
+body {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Darker gradient */
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center container */
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Weather Card */
+#weatherCard {
+  max-width: 420px;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 20px;
+  background: rgba(30, 40, 55, 0.75); /* Dark glass effect */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5),
+              inset 0 0 15px rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#weatherCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
+              0 0 15px rgba(46, 204, 113, 0.3);
+}
+
+/* Title */
+#weatherCard h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ecf0f1;
+  margin-bottom: 12px;
+}
+
+/* City + Country */
+#cityName {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f1c40f; /* Yellow highlight */
+}
+#countryName {
+  font-size: 15px;
+  color: #bdc3c7;
+  margin-bottom: 10px;
+}
+
+/* Weather Icon */
+.weather-icon {
+  width: 90px;
+  height: 90px;
+  margin: 15px auto;
+  display: block;
+  animation: floatIcon 3s ease-in-out infinite;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.5));
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Temperature */
+.temp {
+  font-size: 60px;
+  font-weight: bold;
+  color: #1abc9c; /* Neon greenish */
+  margin: 10px 0;
+  text-shadow: 0 0 12px rgba(26, 188, 156, 0.6);
+}
+
+/* Weather description */
+#description {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3498db;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+/* Details (humidity, wind, etc.) */
+.details p {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #ecf0f1;
+}
+
+/* Input + Buttons */
+input.form-control {
+  border-radius: 12px;
+  border: 1px solid #555;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  color: #ecf0f1;
+  transition: 0.3s;
+}
+input.form-control:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 10px rgba(26, 188, 156, 0.6);
+  outline: none;
+}
+
+button {
+  border-radius: 12px !important;
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #16a085, #27ae60);
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(39, 174, 96, 0.6);
+}
